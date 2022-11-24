@@ -30,3 +30,11 @@ ul{
     text-align: center;
     padding: 5px;
 }
+
+.menu{
+    color: white;
+}
+
+#navigation{
+    background-color: rgb(18, 182, 182);
+}
