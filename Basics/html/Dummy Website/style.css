@@ -1,0 +1,94 @@
+html,
+body {
+    background: #f7e9ddab;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: url(bg.jpg);
+    background-size: 30%;
+    color: #fd70a4;
+    font-family: "Nerko One";
+    font-size: 25pt;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #fdcebd;
+    color: rgb(119, 13, 119);
+    ;
+    font-family: "Nerko One";
+    font-size: 18pt;
+    padding: 2px;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin: 100px;
+}
+
+li:hover {
+    color: white;
+}
+
+#meme {
+    float: right;
+    height: 260px;
+    margin-top: -45px;
+    padding-right: 300px;
+    width: 270px;
+}
+
+main {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15pt;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+h2 {
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    ;
+}
+
+.input {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+}
+
+#nickname,
+#email {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10pt;
+    font-style: italic;
+    padding-top: 5px;
+}
+
+.btn {
+    font-family: "Nerko One";
+    font-size: 10pt;
+    padding-top: 5px;
+}
+
+.movie {
+    display: inline;
+}
+
+.continent {
+    display: inline;
+}
+
+footer {
+    font-size: 12px;
+    padding-left: 10px;
+}

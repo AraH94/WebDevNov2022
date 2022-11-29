@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Dummy Website</title>
+</head>
+
+<body>
+    <header>
+        <h1>My Dummy Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <h2>About me</h2>
+        <img id="meme" src="meme.png">
+        <form action="">
+            <label class="input">Name:</label>
+            <input id="nickname" type="text" maxlength="15" placeholder="Enter your nickname" required>
+            <button class="btn">Submit</button>
+            </br>
+
+            <label class="input">Email:</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
+            <button class="btn">Submit</button>
+            </br>
+
+
+            <label class="input">Age:</label>
+            <input type="radio" name="age">
+            <label>12-18</label>
+            <input type="radio" name="age">
+            <label>18-25</label>
+            <input type="radio" name="age">
+            <label>25-40</label>
+            </br>
+
+            <label class="input">Gender:</label>
+            <input type="radio" name="gender">
+            <label>Male <i class="fa-solid fa-mars"></i></label>
+            <input type="radio" name="gender">
+            <label>Female <i class="fa-solid fa-venus"></i></label>
+            <input type="radio" name="gender">
+            <label>Other <i class="fa-solid fa-neuter"></i></label>
+            <br />
+
+            <h2>Things I like</h2>
+            <label class="input">Favorite music genre <i class="fa-solid fa-music"></i></label>
+            <br />
+            <input type="checkbox">
+            <label>Reggae</label>
+            <audio controls>
+			<source
+				src="http://www.greenbeatmusic.co.uk/mp3/Reggae%20Pan%20Classics%20Mp3/Red%20Red%20Wine.%20(mp3%20mix)%20mp3.mp3">
+		</audio>
+            <br />
+
+            <input type="checkbox">
+            <label>Rock</label>
+            <audio controls>
+			<source src="http://cool-sound.eu/MP3/ROCK/YOU%20GIVE%20LOVE%20A%20BAD%20NAME_%20-%20BON%20JOVI.mp3">
+		</audio>
+            <br />
+
+            <input type="checkbox">
+            <label>HipHop</label>
+            <audio controls>
+			<source src="http://b1g-arch1ve.buho.ch/hiphop/US/Missy%20Elliot/Missy%20Elliot%20-%20Work%20It.mp3">
+		</audio>
+            <br />
+
+            <input type="checkbox">
+            <label>Classic</label>
+            <audio controls>
+			<source
+				src="http://virtualizart.com/music/classic/Beethoven/04%20Symphony%20No.%209%20in%20D%20minor%20('Choral')%20Op.%20125-%20Presto%20-%20Allegro%20assai.mp3">
+		</audio>
+            <br />
+
+            <label class="input">Favorite movie genre <i class="fa-solid fa-film"></i></label>
+            <br/>
+            <div class="movie movie1">
+                <input type="checkbox">
+                <label>Comedy</label>
+                <iframe class="youtube" width="350" height="200" src="https://www.youtube.com/embed/s0gdBeTqql8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		</iframe>
+            </div>
+            <div class="movie movie1">
+                <input type="checkbox">
+                <label>Romantic</label>
+                <iframe class="youtube" width="350" height="200" src="https://www.youtube.com/embed/gX41KKMxJV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		</iframe>
+            </div>
+            <br/>
+            <div class="movie movie1">
+                <input type="checkbox">
+                <label>Thriller</label>
+                <iframe class="youtube" width="350" height="200" src="https://www.youtube.com/embed/otwfRPuE6O8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		</iframe>
+            </div>
+            <div class="movie movie1">
+                <input type="checkbox">
+                <label>Horror</label>
+                <iframe class="youtube" width="350" height="200" src="https://www.youtube.com/embed/jpHELOf0GfI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		</iframe>
+            </div>
+            </div>
+            <br />
+
+            <label class="input">Favorite continent <i class="fas fa-globe"></i></label>
+            <br />
+            <div class="continent continent1">
+                <input type="checkbox">
+                <label>Europe</label>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21814563.292685576!2d4.165723613173622!3d48.13124822128036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ed8886cfadda85%3A0x72ef99e6b3fcf079!2sEuropa!5e0!3m2!1snl!2sbe!4v1669733356445!5m2!1snl!2sbe"
+                    width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="continent continent2">
+                <input type="checkbox">
+                <label>Asia</label>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57173176.00670385!2d99.99999999999999!3d29!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3663f18a24cbe857%3A0xa9416bfcd3a0f459!2zQXppw6s!5e0!3m2!1snl!2sbe!4v1669733524031!5m2!1snl!2sbe"
+                    width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <br/>
+            <div class="continent continent3">
+                <input type="checkbox">
+                <label>America</label>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26358473.51424565!2d-113.70166126050782!3d36.24952296212662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sVerenigde%20Staten!5e0!3m2!1snl!2sbe!4v1669733566839!5m2!1snl!2sbe"
+                    width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+            </div>
+            <div class="continent continent4">
+                <input type="checkbox">
+                <label>Oceania</label>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64131041.70384563!2d130.66975145!3d-11.169253549999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6e41bc2bfc38b041%3A0x4b6ab384c4ebeb6e!2zT2NlYW5pw6s!5e0!3m2!1snl!2sbe!4v1669733642809!5m2!1snl!2sbe"
+                    width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+
+        </form>
+    </main>
+    <footer>
+        <p>
+            This page is made by Ara Hoedemakers &copy;
+        </p>
+    </footer>
+</body>
+
+</html>
