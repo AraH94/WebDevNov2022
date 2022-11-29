@@ -1,0 +1,107 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /* reset css */
+}
+
+* {
+    /* any element in document */
+}
+
+header {
+    /* background: darkblue; */
+    background: url(bg.jpg);
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    font-family: "Solway";
+}
+
+nav {
+    background: rgb(7, 7, 53);
+    color: antiquewhite;
+    padding: 5px;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    display: inline;
+    font-size: 14pt;
+    margin-right: 5px;
+}
+
+li:hover {
+    color: greenyellow;
+}
+
+main {
+    padding: 20px;
+}
+
+article {
+    border-bottom: 1px dashed black;
+    /* height: 300px;
+    width: 300px;
+    background: red; */
+    /* outline-style: groove;
+    outline-width: 10px;
+    outline-color: red;
+    border: 10px solid green; */
+}
+
+.icon {
+    box-shadow: 10px 10px black;
+    color: red;
+    font-size: 40pt;
+}
+
+.icon:hover {
+    color: black;
+    /* -webkit-box-shadow: -7px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -7px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -7px 10px 5px 0px rgba(0, 0, 0, 0.75); */
+}
+
+.btn {
+    background: white;
+    border: 2px solid #04AA6D;
+    font-size: 14pt;
+    padding: 5px 30px;
+}
+
+.btn:hover {
+    background: #04AA6D;
+    color: white;
+}
+
+.box {
+    border: 1px solid red;
+    color: white;
+    height: 300px;
+    position: absolute;
+    /* absolute allows us to move elements */
+    width: 300px;
+}
+
+.box1 {
+    background: black;
+    left: 0;
+    top: 0;
+}
+
+.box2 {
+    background: green;
+    right: 0;
+    top: 0;
+}
+
+.box3 {
+    background: orange;
+    bottom: 0;
+    left: 0;
+}
