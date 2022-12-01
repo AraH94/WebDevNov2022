@@ -1,0 +1,54 @@
+.box {
+    width: 300px;
+    height: 300px;
+    padding: 10%;
+    position: absolute;
+}
+
+.box1 {
+    background: red;
+    z-index: -4;
+    /* afbeelding naar voor of achteren brengen */
+}
+
+.box2 {
+    background: green;
+    left: 20px;
+    top: 20px;
+    z-index: -5;
+}
+
+.box3 {
+    background: blue;
+    left: 40px;
+    top: 40px;
+}
+
+.box4 {
+    background: black;
+    left: 60px;
+    top: 60px;
+    z-index: -4;
+}
+
+.sticky {
+    background-color: chocolate;
+    height: 100px;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 200px;
+}
+
+p {
+    float: left;
+    width: 300px;
+}
+
+.longtext {
+    background-color: brown;
+    color: black;
+    float: right;
+    height: 100px;
+    width: 200px;
+}

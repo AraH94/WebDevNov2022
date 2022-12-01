@@ -1,0 +1,21 @@
+*html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    align-items: flex-start;
+    display: flex;
+    height: 100px;
+    justify-content: space-evenly;
+}
+
+.child {
+    background: rgb(153, 153, 217);
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+}
