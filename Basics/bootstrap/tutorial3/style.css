@@ -1,0 +1,16 @@
+:root {
+    --brussel: #6610f2;
+    --customfont: 'Sans-Serif';
+}
+
+.bg-test {
+    background-color: var(--bs-indigo-100);
+}
+
+.bg-brussel {
+    background: var(--brussel)
+}
+
+.bg-blog {
+    background: var(--brussel)
+}
