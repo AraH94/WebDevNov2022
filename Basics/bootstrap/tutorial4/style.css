@@ -1,0 +1,25 @@
+    .myCustomBtn:hover {
+        background-color: red !important;
+    }
+    /* input {
+    background-color: rgb(101, 200, 2) !important;
+    color: black !important;
+    width: 80% !important;
+} */
+    /* Specifik input */
+    
+    input[type='email'] {
+        background: red !important;
+    }
+    
+    #register>.mb-3>input[type='email'] {
+        background-color: red !important;
+    }
+    
+    #register>.mb-3:nth-child(3)>input {
+        background-color: green !important;
+    }
+    
+    #login>.mb-3:nth-child(odd)>input {
+        background-color: purple !important;
+    }
