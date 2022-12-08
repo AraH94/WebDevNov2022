@@ -23,3 +23,15 @@
     #login>.mb-3:nth-child(odd)>input {
         background-color: purple !important;
     }
+    
+    .customcolor {
+        background-color: hwb(190 63% 5%);
+    }
+    
+    .buttoncolor {
+        background-color: rgb(245, 162, 176);
+    }
+    
+    .buttoncolor:hover {
+        background-color: #cca9dd !important;
+    }
