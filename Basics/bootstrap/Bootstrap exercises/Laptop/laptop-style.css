@@ -1,0 +1,28 @@
+.btnmenu {
+    background-color: #C0C0C0;
+}
+
+.fa-solid.fa-star,
+.fa-solid.fa-star-half-stroke {
+    color: rgb(235, 167, 30);
+}
+
+.col-img {
+    border-right: 1px solid rgb(190, 190, 190);
+    background-color: rgb(190, 190, 190);
+    ;
+}
+
+.amount {
+    color: rgb(74, 183, 167);
+}
+
+.a-price-symbol,
+.a-price-fraction {
+    top: -0.75em;
+    font-size: 20px;
+}
+
+.a-price-whole {
+    font-size: 38px;
+}
