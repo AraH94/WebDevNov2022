@@ -1,0 +1,17 @@
+.carousel-item>img {
+    height: 60vh;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.navbar {
+    background-color: rgb(252, 242, 250);
+}
+
+.infobutton {
+    background-color: pink;
+}
+
+.trymebutton {
+    background-color: rgb(165, 61, 165) !important;
+}

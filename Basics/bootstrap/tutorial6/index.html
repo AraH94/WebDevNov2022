@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Tutorial 6</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid p-0">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#"><img src="data:image/png;base64,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"
+                            class="w-50" alt=""></a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-info" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide mb-5" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/Slider1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Slider2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Slider3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button>
+        </div>
+
+        <!-- Pop up -->
+        <!-- Button trigger modal -->
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="card1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-light">
+                    <div class="modal-header bg-warning">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Pop-up 1</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-light">
+                        Congrats! You made it work ! :)
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success text-light">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="card2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-light">
+                    <div class="modal-header bg-warning">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Pop-up 2</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-light">
+                        Congrats! You made it work ! :)
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success text-light">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="card3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-light">
+                    <div class="modal-header bg-warning">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Pop-up 3</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-light">
+                        Congrats! You made it work ! :)
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success text-light">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="card4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-light">
+                    <div class="modal-header bg-warning">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Pop-up 4</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-light">
+                        Congrats! You made it work ! :)
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success text-light">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#card1">
+                    <img src="images/Coding.jpg " class="w-50 rounded m-3 mx-auto d-block " alt=" ">
+
+                    <div class="card-body ">
+                        <p class="card-title "></p>
+                        <p class="card-text ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <button class="btn btn-info infobutton ">More info</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 ">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#card2">
+                    <img src="images/Coding.jpg " class="w-50 m-3 rounded mx-auto d-block " alt=" ">
+
+                    <div class="card-body ">
+                        <p class="card-title "></p>
+                        <p class="card-text ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <button class="btn btn-info infobutton ">More info</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 ">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#card3">
+                    <img src="images/Coding.jpg " class="w-50 m-3 rounded mx-auto d-block " alt=" ">
+
+                    <div class="card-body ">
+                        <p class="card-title "></p>
+                        <p class="card-text ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <button class="btn btn-info infobutton ">More info</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#card4 ">
+                    <img src="images/Coding.jpg " class="w-50 m-3 rounded mx-auto d-block " alt=" ">
+
+                    <div class="card-body ">
+                        <p class="card-title "></p>
+                        <p class="card-text ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <button class="btn btn-info infobutton ">More info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js " integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3 " crossorigin="anonymous ">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js " integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz " crossorigin="anonymous ">
+    </script>
+</body>
+
+</html>
