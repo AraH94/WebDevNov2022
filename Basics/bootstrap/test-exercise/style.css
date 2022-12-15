@@ -1,0 +1,37 @@
+        .nav-pills-active {
+            background-color: #4293A7 !important;
+        }
+        
+        .nav-item {
+            color: #4293A7;
+        }
+        
+        .nav-link:hover {
+            background-color: #4293A7;
+            color: white;
+            text-decoration: none;
+        }
+        
+        ins:hover {
+            text-decoration: none;
+        }
+        
+        .navbar-brand>img {
+            width: 150px;
+        }
+        
+        .btninfo {
+            background-color: #4293A7;
+            border-radius: 5px;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+        }
+        
+        .btninfo:hover {
+            color: white;
+        }
+        
+        .visiting {
+            font-size: 25 px;
+        }
