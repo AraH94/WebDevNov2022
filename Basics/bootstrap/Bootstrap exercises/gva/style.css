@@ -1,3 +1,17 @@
 .logo {
-    width: 150px;
+    background-image: url(Images/logo.png);
+    width: 90px;
+}
+
+.text-recent {
+    list-style: none;
+}
+
+.recent {
+    padding-left: 30px;
+    padding-right: 35px;
+}
+
+.gelezen {
+    padding-left: 25px;
 }
