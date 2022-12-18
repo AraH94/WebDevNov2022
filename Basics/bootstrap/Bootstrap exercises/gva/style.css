@@ -15,3 +15,42 @@
 .gelezen {
     padding-left: 25px;
 }
+
+.foto2 {
+    padding-right: 20px;
+    width: 350px;
+}
+
+.foto3 {
+    height: 220px;
+    width: 290px;
+}
+
+.fa-solid.fa-plus {
+    color: red;
+    font-size: 10px;
+}
+
+.title1,
+.title2,
+.title3 {
+    font-size: 20px;
+}
+
+.title4,
+.title5 {
+    font-size: 15px;
+}
+
+.foto4 {
+    height: 110px;
+    width: 180px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.foto5 {
+    height: 110px;
+    width: 180px;
+    padding-left: 20px;
+}
