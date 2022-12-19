@@ -1,0 +1,28 @@
+.flag {
+    width: 15px;
+}
+
+.logo {
+    height: 70%;
+    width: 5%;
+}
+
+.btnsearch {
+    font-size: 13px;
+    margin-left: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.form-control {
+    padding-right: 250px;
+}
+
+.collapse>ul,
+li {
+    font-size: 12px;
+}
+
+.title {
+    font-size: 20px;
+}
