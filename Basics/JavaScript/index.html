@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>JavaScript lesson 1</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS v5.2.1 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+	<!-- Link JavaScript file-->
+	<script src="./index.js"></script>
+
+	<script>
+		console.log('Hello World from head') //visible only in dev tools
+		document.write('Hello Friend !!!') //visible on the page
+		document.writeln("<h1 class='display-1 text-danger'>Hello Hello</h1>") //visible on the page
+		document.write('<p class="text-success">Hello message with green color</p>') //visible on the page
+
+		function popUpWindow() {
+			alert('Hello World')
+			console.log('Hello world frmo function')
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Hello World !!!</h1>
+	<button class="btn btn-danger" onclick="popUpWindow()">
+		Don't click here
+	</button>
+
+	<script>
+		console.log('Hello World from body')
+		document.write('Hello Bro !!!')
+	</script>
+
+	<!-- Bootstrap JavaScript Libraries -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+		</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+		integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+		</script>
+</body>
+
+</html>
