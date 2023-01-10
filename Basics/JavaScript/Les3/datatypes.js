@@ -29,6 +29,8 @@ result = {
 	name: "Michael" // object
 }
 
+console.log(result)
+
 //function
 function getName() {
 	return "blabla"
