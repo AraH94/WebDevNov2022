@@ -45,13 +45,13 @@ console.log(result);
 
 // 3. write a function that adds a student to the students array and displays the students array
 let students = [];
-// /*
-// full_name:"John Doe"
-// age: 20
-// email: "johndoe@microsoft.com"
-// phone: "123-456-7890
-// address: "123 Main St.
-// */
+/*
+full_name:"John Doe"
+age: 20
+email: "johndoe@microsoft.com"
+phone: "123-456-7890
+address: "123 Main St.
+*/
 function AddStudent(obj) {
 	students.push(obj)
 	return students;
