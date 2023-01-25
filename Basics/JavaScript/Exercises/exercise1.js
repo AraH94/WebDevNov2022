@@ -90,16 +90,16 @@ user.map(function (year) {
 		console.log(year.age)
 })
 
-
 // 3. Create a function that can find the persons who live in the same city.
-// let citylist = []
+let citylist = []
 user.map(function (location) {
-	if (location.city.group("Brussel", "Istanbul", "Ghent")) {
-		console.log(location.city)
-		// citylist.push(location.name.city)
+// user.sort(function (location) {
+	if (location.city.includes("Brussel", "Istanbul", "Ghent")) {
+		// console.log(location.city)
+		citylist.push(location.city)
 	}
 })
-// console.log(citylist);
+console.log(citylist);
 
 // 4. Create a function that can find the persons who have gmail email.
 user.map(function (city) {
