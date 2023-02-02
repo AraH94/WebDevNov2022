@@ -10005,5 +10005,22 @@ var text  = `0001100000101010100
 // To solve this problem may be you need to use the function split(), the function forEach or map and length property.
 // do not forget to use if statement and logical operators.
 
-text.split(" ");
-console.log(text);
+// 00101000001000111110 > 12 zero and  8 one 
+// 12%3===0 > true or false
+// 8%2 === 0 > true or false
+// true > count++
+
+let count = 0;
+let LineByLine = text.split('\n')
+LineByLine.forEach(line => {
+
+    // let one = line.match(/1/g) || []
+    let one = line.replaceAll("0", "").length
+    let zero = line.replaceAll("1", "").length
+    // console.log(`One: ${one}\nZero:${zero}`)
+    if (one % 3 === 0 || zero % 2 === 0) {
+        count++
+    }
+})
+
+console.log(count)

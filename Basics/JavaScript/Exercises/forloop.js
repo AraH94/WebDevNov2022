@@ -802,61 +802,136 @@ const people = [
 ]
 
 // 1. loop through the array and print out the name of each person
-for (let x = 0; x < people.length; x++) {
-	console.log(people[x].name);
-}
+people.forEach(person => {
+	console.log(person.name)
+})
+
+// Me
+// for (let x = 0; x < people.length; x++) {
+// 	console.log(people[x].name);
+// }
 
 // 2. loop through the array and print out the name and phone number of each person
+
+people.forEach(person => {
+	console.log(`Phone: ${person.phone}\nName: ${person.name}`)
+})
+
+// Me
 // let arr=[]
-for (let x = 0; x < people.length; x++) {
-	console.log(people[x].name + " " + people[x].phone);
-	// arr.push(people[x].name)
-	// arr.push(people[x].phone)
-}
+// for (let x = 0; x < people.length; x++) {
+// 	console.log(people[x].name + " " + people[x].phone);
+// arr.push(people[x].name)
+// arr.push(people[x].phone)
+// }
 // console.log(arr)
 
 // 3. loop through the array and print out the name and address of each person
-for (let x; x < people.length; x++) {
-	console.log(people[x].name + " " + people[x].address)
+for (let x = 0; x < people.length; x++) {
+	console.log(`name:${people[x].name}\naddress:${people[x].address}`)
 }
 
 // 4. loop through the array and print out the name and postalZip of each person
-for (let x = 0; x < people.length; x++) {
-	console.log(people[x].name + " " + people[x].postalZip);
+for (let person of people) {
+	console.log(`Name:${person.name}\nPostalZip:${person.postalZip}`)
 }
+
+// Me
+// for (let x = 0; x < people.length; x++) {
+// 	console.log(people[x].name + " " + people[x].postalZip);
+// }
 
 // 5. loop through the array and print out the name and country of each person
-for (let x = 0; x < people.length; x++) {
-	console.log(people[x].name + " " + people[x].country);
-}
+people.map(person => console.log(`Name:${person.name}\nCountry:${person.country}`))
+
+// Me
+// for (let x = 0; x < people.length; x++) {
+// 	console.log(people[x].name + " " + people[x].country);
+// }
 
 // 6. loop through the array and print out the name and region of each person
-for (let x = 0; x < people.length; x++) {
-	console.log(people[x].name + " " + people[x].region);
-}
+people.map(person => console.log(`Name:${person.name}\nRegion:${person.region}`))
+
+// Me
+// for (let x = 0; x < people.length; x++) {
+// 	console.log(people[x].name + " " + people[x].region);
+// }
 
 // 7. loop through the array and print out the name and phone number of each person if the country is "Canada"
-for (let x = 0; x < people.length; x++) {
-	console.log(people[x].name + " " + people[x].phone)
-	if (people[x].country === "Canada") {
+people.forEach(person => {
+	if (person.country === 'Canada') {
+		console.log(`Name:${person.name}\nPhone:${person.phone}`)
 	}
-}
+})
+
+// Me
+// for (let x = 0; x < people.length; x++) {
+// 	console.log(people[x].name + " " + people[x].phone)
+// 	if (people[x].country === "Canada") {
+// 	}
+// }
 
 
 // 8. loop through the array and print out the name and phone number of each person if the country is "Canada" or "Mexico"
-for (let x = 0; x < people.length; x++) {
-	console.log(people[x].name + " " + people[x].phone)
-	if (people[x].country === "Canada" || people[x].country === "Mexico") {
+people.forEach(person => {
+	if (person.country === 'Canada' || person.country === 'Mexico') {
+		console.log(`Name:${person.name}\nPhone:${person.phone}`)
 	}
-}
+})
+
+// Me
+// for (let x = 0; x < people.length; x++) {
+// 	console.log(people[x].name + " " + people[x].phone)
+// 	if (people[x].country === "Canada" || people[x].country === "Mexico") {
+// 	}
+// }
+
 // 9. loop through the array and print out the name and phone number of each person if the country is "Canada" or "Mexico" or "Ireland"
+people.forEach(person => {
+	if (person.country === 'Canada' || person.country === 'Mexico' || person.country === 'Ireland') {
+		console.log(`Name:${person.name}\nPhone:${person.phone}`)
+	}
+})
+
+// OR
+
 for (let x = 0; x < people.length; x++) {
-	console.log(people[x].name + " " + people[x].phone)
-	if (people[x].country === "Canada" || people[x].country === "Mexico" || people[x].country === "Ireland") {
+	if (people[x].country === 'Canada' || people[x].country === 'Mexico' || people[x].country === 'Ireland') {
+		console.log(`Name:${people[x].name}\nPhone:${people[x].phone}`)
 	}
 }
 
+// Me
+// for (let x = 0; x < people.length; x++) {
+// 	console.log(people[x].name + " " + people[x].phone)
+// 	if (people[x].country === "Canada" || people[x].country === "Mexico" || people[x].country === "Ireland") {
+// 	}
+// }
+
 // 10. loop through the array and compare the postalZip of each person to the postalZip and print out the name and postalZip of each person if the postalZip is the same as the postalZip of the person in the array
-for (let x = 0; x < people.length; x++) {
-	console.log(people[x].name + " " + people[x].postalZip);
+// Option 1
+// let found = []
+// people.forEach(person => {
+// console.log(person.postalZip)
+// 	let sameZipCode = people.filter(x => x.postalZip === person.postalZip)
+// 	found = sameZipCode
+// })
+// console.log(found)
+
+// Option 2
+// let found = []
+// people.forEach(function (person1) {
+// 	console.log(person1.postalZip)
+// 	for 
+// })
+// console.log(found)
+
+// Option 3
+let found = []
+for (let i = 0; i < people.length; i++) {
+	let getData = people.filter(function (person) {
+		return person.postalZip === people[i].postalZip
+	})
+	found = getData
 }
+console.log(found)
