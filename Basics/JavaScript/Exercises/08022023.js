@@ -106,7 +106,7 @@ function editToDo(todo, value, completed) {
 // 6. Display all todo lists
 // - Loop through the array
 // - Display the object
-function displayToDo(){
+function displayToDo() {
 	ToDoList.forEach(item => {
 		console.log(`Title: ${item.todo}\nCompleted: ${item.completed}\n-----------------`);
 	})
@@ -122,7 +122,7 @@ function displayToDo(){
 // isCompleted === item.completed
 function displayToDos(IsCompleted) {
 	let newToDos = ToDoList.filter(item => item.completed === IsCompleted)
-	console.log(newToDos); // returns one or many todos by property value (completed > filtered data
+	console.log(newToDos); // returns one or many todos by property value (completed > filtered data)
 	return newToDos
 }
 displayToDos(false)
@@ -132,7 +132,7 @@ displayToDo()
 // Exercise 2
 const options = {
 	drink: [
-		{ name: 'cola', price: 1.5 },
+		{ name: 'cola', price: 1.0 },
 		{ name: 'fanta', price: 1.3 },
 		{ name: 'sprite', price: 1.2 },
 		{ name: 'water', price: 1.0 },
@@ -140,11 +140,11 @@ const options = {
 		{ name: 'tea', price: 2.4 },
 	],
 	fastfood: [
-		{ name: 'hamburger', price: 4.0 },
-		{ name: 'cheeseburger', price: 4.3 },
-		{ name: 'hotdog', price: 3.5 },
-		{ name: 'fries', price: 4.3 },
-		{ name: 'chicken nuggets', price: 5.0 },
+		{ name: 'hamburger', price: 4.0, label: 'halal' },
+		{ name: 'cheeseburger', price: 4.3, label: 'non-halal' },
+		{ name: 'hotdog', price: 3.5, label: 'halal' },
+		{ name: 'fries', price: 4.3, label: 'non-halal' },
+		{ name: 'chicken nuggets', price: 5.0, label: 'halal' },
 	],
 	sauces: [
 		{ name: 'ketchup', price: 0.4 },
@@ -155,12 +155,62 @@ const options = {
 		{ name: 'hot sauce', price: 0.6 },
 	]
 }
+
 // Create MakeOrder function that takes 3 parameters: drink, fastfood, sauces and returns the total price of the order
-// let sum = options.drink.reduce(function (a, b) {
-// 	return a + b
-// });
-// console.log(sum);
 
 // Create displayOrder function that displays the order in the console
 
 // Expected output: You ordered a cola, hamburger with ketchup and the total is 4.5 euro
+
+function MakeOrder(drink, food, sauces) {
+	let total_price = 0;
+	// return an object with customer's order
+	console.log(drink, food, sauces);
+	let drink_price = options.drink.find(function (product) {
+		return product.name === drink
+	})
+	total_price += drink_price.price;
+
+	let food_price = options.fastfood.find(function (product) {
+		return product.name === food
+	})
+	total_price += food_price.price;
+
+	let sauces_price = options.sauces.find(function (product) {
+		return product.name === sauces
+	})
+	total_price += sauces_price.price;
+
+	console.log(drink_price, food_price, sauces_price);
+
+	const obj = {
+		drink,
+		food,
+		sauces,
+		total_price
+	}
+	// console.log(obj);
+	return obj
+}
+MakeOrder('cola', 'fries', 'ketchup')
+
+
+// create a function that can display halal food or non halal food
+
+
+// You ordered a cola, hamburger with ketchup and the total is 4.5 euro
+function displayOrder(order) {
+	console.log(`You ordered a ${order.drink}, ${order.food} with ketchup and the total is ${order.total_price} euro`)
+}
+
+let order = MakeOrder('cola', 'fries', 'ketchup') // this function returns an object with product names and total_price
+
+displayOrder(order)
+
+// display halal food out
+// hint: filter
+function ListOfHalalFood(term) {
+	return options.fastfood.filter(product => product.label === term)
+}
+
+console.log(ListOfHalalFood('non-halal'));
