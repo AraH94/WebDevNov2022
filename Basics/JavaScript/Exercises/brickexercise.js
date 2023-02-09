@@ -19,7 +19,7 @@ const BrickTypes = {
 // console.log(WallArea(10, 10) / BrickSize(BrickTypes.standardhousebrick[0], BrickTypes.standardhousebrick[1]))
 
 /*
-wallarra = width * height
+wallarrea = width * height
 bricksize = width * height
 WallArea / Bricksize = Bricksrequired
 */
@@ -119,3 +119,4 @@ function BrickCalculator(wallWidth, wallHeight, brickWidth, brickHeight) {
 	console.log(`The number of bricks are ${Math.round(numberOfBricks)}`);
 }
 BrickCalculator(40, 10, BrickTypes.standardhousebrick[0], BrickTypes.standardhousebrick[1])
+
