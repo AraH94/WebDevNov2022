@@ -300,7 +300,7 @@ for (let user of usernames){ // prints values not property names
 	console.log(user);
 }
 
-for (let user in usernames){ // gives the number of the array
+for (let user in usernames){ // gives the number of the array. Iterates over all enumerable string properties of an object (ignoring properties keyed by symbols), including inherited enumerable properties
 	console.log(user);
 }
 

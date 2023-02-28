@@ -42,51 +42,51 @@
 // console.log(Fullname());
 
 // Create an object
-// const personInfo = {
-// 	firstName: 'Ara',
-// 	lastName: 'Hoedemakers',
-// 	age: 28,
-// 	homeTown: 'Maaseik',
-// 	fullname: function () {
-// 		return this.firstName + " " + this.lastName
-// 	}
-// }
-// console.log(personInfo.fullname());
+const personInfo = {
+	firstName: 'Ara',
+	lastName: 'Hoedemakers',
+	age: 28,
+	homeTown: 'Maaseik',
+	fullname: function () {
+		return this.firstName + " " + this.lastName
+	}
+}
+console.log(personInfo.fullname());
 
 // Object constructors
-// function Animal(first, last, age, color, type) {
-// 	this.firstName = first,
-// 		this.lastName = last,
-// 		this.ageAnimal = age,
-// 		this.colorAnimal = color,
-// 		this.typeOfAnimal = type,
-// 		this.changeName = function (name) {
-// 			this.firstName = name;
-// 		}
-// }
+function Animal(first, last, age, color, type) {
+	this.firstName = first,
+		this.lastName = last,
+		this.ageAnimal = age,
+		this.colorAnimal = color,
+		this.typeOfAnimal = type,
+		this.changeName = function (name) {
+			this.firstName = name;
+		}
+}
 
-// Animal.prototype.nationality = "Belgian";
+Animal.prototype.nationality = "Belgian";
 
-// let myDog = new Animal('Adobo', 'Pinoy', 2, 'lightbrown', 'pomeranian');
-// let myCat = new Animal('Frisky', 'Pinay', 1, 'blackandwhite', 'mainecoon');
+let myDog = new Animal('Adobo', 'Pinoy', 2, 'lightbrown', 'pomeranian');
+let myCat = new Animal('Frisky', 'Pinay', 1, 'blackandwhite', 'mainecoon');
 
 // Using protype to add new property to constructor
 
 
 // Add property to object
-// myDog.gender = "male"
+myDog.gender = "male"
 
 // Add a method to object
-// myDog.fullName = function () {
-// 	return this.firstName + " " + this.lastName
-// }
+myDog.fullName = function () {
+	return this.firstName + " " + this.lastName
+}
 
 // Change first name
-// myDog.changeName("Pusit");
+myDog.changeName("Pusit");
 
-// console.log(myDog.nationality)
+console.log(myDog.nationality)
 
-// console.log("My dogs name is " + myDog.firstName + " and is a " + myDog.gender + " and my cats name is " + myCat.firstName);
+console.log("My dogs name is " + myDog.firstName + " and is a " + myDog.gender + " and my cats name is " + myCat.firstName);
 // document.getElementById("demo").innerHTML = "My dogs name is " + myDog.firstName + " and my cats name is " + myCat.firstName
 
 // Events onclick
@@ -394,3 +394,32 @@ console.log(x(8, 8));
 
 const y = (a, b) => a * b;
 console.log(y(4, 2));
+
+// for loop
+function countSelected(selectObject){
+	let numberSelected=0;
+	for(i = 0; i < selectObject.options.length; i++){
+		if(selectObject.options[i].selected){
+			numberSelected++
+		}
+	}
+	return numberSelected;
+}
+console.log();
+
+// for of and for in
+let usernames = ['mohammed','ahmad','bilal','arhisa','nina','hande'];
+
+for(let i of usernames){
+	console.log(i);
+}
+
+let student = {
+    name:"Ara",
+    email:"arahoedemakers@hotmail.com",
+    age:28
+}
+
+for (let i in student){
+	console.log(student[i]);
+}
