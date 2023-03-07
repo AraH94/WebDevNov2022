@@ -33,7 +33,6 @@ let tblBody = document.createElement('tbody');
 const TrOfThead = document.createElement('tr');
 
 
-
 // Child of tr in thead
 const ThOfTrInThead1 = document.createElement('th');
 // Insert text into th
@@ -45,7 +44,6 @@ ThOfTrInThead1.appendChild(document.createTextNode('Username'));
 
 const ThOfTrInThead3 = document.createElement('th');
 ThOfTrInThead1.appendChild(document.createTextNode('Password'));
-
 
 
 // Append TH elements into Tr of thead
@@ -75,10 +73,11 @@ Tr_Of_Tbody.appendChild(Td_Of_Tr_inTbody2);
 Tr_Of_Tbody.appendChild(Td_Of_Tr_inTbody3);
 
 // TR appended into tbody
-tblBody.appendChild(Tr_Of_Tbody)
+tblBody.appendChild(Tr_Of_Tbody);
 
 // Append thead into table
 table.appendChild(tblHead);
 table.appendChild(tblBody);
 
 ParentElement.appendChild(table);
+
