@@ -1,3 +1,6 @@
+// POST = create data
+// GET = retrive data
+
 /*
 Fake backend in local computer
 COMMAN > json-server data.json --watch
@@ -116,8 +119,8 @@ function UpdateHandler() {
 		// new json data will be stored in body prop's value as string data type
 		body: JSON.stringify(newObjectData) // always as string
 	})
-	.then(res=>res.json())
-	.then(data=>{
-		console.log(data,'UPDATED');
-	})
+		.then(res => res.json())
+		.then(data => {
+			console.log(data, 'UPDATED');
+		})
 }
