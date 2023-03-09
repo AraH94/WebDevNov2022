@@ -12,6 +12,9 @@ const NewsContainer = document.querySelector('.news')
 let parser = new DOMParser()
 
 // STEP1: fetch the data from the news.json file
+// STEP2: create the news card
+// STEP3: append the news card to the news container
+
 fetch('news.json') // OR  fetch('http://localhost:3000/database')
 	.then(response => response.json())
 	.then(data => {
@@ -28,8 +31,5 @@ fetch('news.json') // OR  fetch('http://localhost:3000/database')
 		})
 	})
 
-// STEP2: create the news card
 
-
-// STEP3: append the news card to the news container
 
