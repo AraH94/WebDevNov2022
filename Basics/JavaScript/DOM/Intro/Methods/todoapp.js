@@ -111,9 +111,28 @@ console.log(ListOfTodos.lastElementChild);
 // }, 5000);
 
 // usage: setInterval(callback, ms_time)
-setInterval(() => {
-	console.log('This is interval')
-	if (ListOfTodos.children.length > 0) {
-		ListOfTodos.firstChild.remove()
+// setInterval(() => {
+// 	console.log('This is interval')
+// 	if (ListOfTodos.children.length > 0) {
+// 		ListOfTodos.firstChild.remove()
+// 	}
+// }, 2000);
+
+
+// addEventListener() => to create html event ('click')
+// addEventListener('click', ()=>{});
+// event -> object
+
+ListOfTodos.addEventListener('click', (event) => {
+	console.log('Hello world', event.target.classList);
+	// event.target.remove();
+	// console.log(event.target.parentElement.remove());
+	// event.target.parentElement.parentElement.remove();
+	console.log(event.target.classList.contains('fa-remove'));
+	const isRemoved = event.target.classList.contains('fa-remove');
+
+	// contains > true or false
+	if (isRemoved){
+		event.target.parentElement.parentElement.remove()
 	}
-}, 2000);
+})
