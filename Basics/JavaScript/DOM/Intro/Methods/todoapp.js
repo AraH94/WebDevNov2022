@@ -111,11 +111,14 @@ console.log(ListOfTodos.lastElementChild);
 // }, 5000);
 
 // usage: setInterval(callback, ms_time)
-// setInterval(() => {
+// const RemoveOneByOne = setInterval(() => {
 // 	console.log('This is interval')
 // 	if (ListOfTodos.children.length > 0) {
 // 		ListOfTodos.firstChild.remove()
-// 	}
+// 	} else{
+// stop interval
+// clearInterval(RemoveOneByOne)
+// }
 // }, 2000);
 
 
@@ -132,7 +135,7 @@ ListOfTodos.addEventListener('click', (event) => {
 	const isRemoved = event.target.classList.contains('fa-remove');
 
 	// contains > true or false
-	if (isRemoved){
+	if (isRemoved) {
 		event.target.parentElement.parentElement.remove()
 	}
 })
