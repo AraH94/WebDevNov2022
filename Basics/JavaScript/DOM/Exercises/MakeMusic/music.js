@@ -11,13 +11,12 @@ const KeyElements = document.querySelectorAll('.key');
 const AudioElements = document.querySelectorAll('audio');
 
 KeyElements.forEach(() => {
-
+	
 })
 
 document.addEventListener('keydown', (e) => {
 	//	console.log('This is keydown event', e.key);
 	playSound(e.key)
-
 	console.log(e.keyCode);
 
 	// Add class
@@ -26,7 +25,7 @@ document.addEventListener('keydown', (e) => {
 	if (keyElement) {
 		keyElement.classList.add('playing')
 
-		// Remove after 3 seconds
+		// Remove after 2 seconds
 		setTimeout(() => {
 			keyElement.classList.remove('playing')
 		}, 200)
