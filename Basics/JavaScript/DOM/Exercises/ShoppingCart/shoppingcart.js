@@ -81,15 +81,17 @@ searchinput.addEventListener("keydown", async (e) => {
 	console.log('Search product');
 	console.log(e.key);
 	console.log(e.target.value)
-	let products = await fetchSearchProducts(e.target.value);
-	console.log(products);
-	displayProducts(products.products);
+
+	// when search input is not empty
+	let allProducts = await fetchSearchProducts(e.target.value);
+	console.log(allProducts);
+	displayProducts(allProducts.products);
 	console.log(e.target.value == "");
 
 	// When search is empty
 	if (e.target.value == "") {
 		let previousAllProducts = await fetchProducts()
-		displayProducts(previousAllProducts.products)
+		displayProducts(previousAllProducts)
 	}
 });
 
