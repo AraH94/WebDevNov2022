@@ -84,8 +84,3 @@ function playSound(sound) {
 			console.log('Press the right sound');
 	}
 }
-
-
-
-
-
