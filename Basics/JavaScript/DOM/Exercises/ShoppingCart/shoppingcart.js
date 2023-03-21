@@ -15,6 +15,17 @@ const fetchProducts = async () => {
 	return data
 };
 
+// const fetchProducts = async () => {
+// 	try {
+// 		let response = await fetch('https://dummyjson.com/products')
+// 	let data = response.json()
+// 	return data
+// 	} catch (error) {
+// 		console.error('sorry');
+// 	}	
+// 	return data
+// };
+
 // 3. Create a function to display products in the DOM
 const displayProducts = (products) => {
 	products.forEach(product => {
