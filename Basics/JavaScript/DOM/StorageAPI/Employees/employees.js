@@ -99,7 +99,8 @@ searchEmployeeBtn.addEventListener('click', (e) => {
 	console.log(allEmployees);
 
 	let employeeResult = allEmployees.filter(employee => {
-		return employee[selectedCol.toLowerCase()] === searchColumn.value // select column is in UpperCase, so we have to convert it first to lowercase
+		let str = searchColumn.value.toLowerCase()
+		return employee[selectedCol.toLowerCase()].match(/searchColumn.value.toLowerCase()/) // select column is in UpperCase, so we have to convert it first to lowercase
 	});
 
 	// let employeeResult = allEmployees.filter(employee => {
@@ -123,4 +124,16 @@ searchEmployeeBtn.addEventListener('click', (e) => {
 	console.log(employeeResult, "result");
 
 	e.preventDefault;
+});
+
+const deleteBtn = document.querySelector('.delete');
+
+// Delete the last person in table
+deleteBtn.addEventListener('click', () =>{
+	const deleteEmployee = GetLocalStorageEmployees()
+	deleteEmployee.pop()
+
+	localStorage.setItem('employee',JSON.stringify(deleteEmployee));
+
+	window.location.reload();
 })
