@@ -1,7 +1,9 @@
 const [username, password] = document.querySelectorAll('input');
 
 const RegisterBtn = document.querySelectorAll('a')[1];
-const EyeIcon = document.querySelector('.fa-eye')
+const EyeIcon = document.querySelector('.fa-eye');
+
+const GetSessionStorageUsers = () => JSON.parse(sessionStorage.getItem('user'));
 
 // event
 RegisterBtn.addEventListener('click', () => {
@@ -10,11 +12,20 @@ RegisterBtn.addEventListener('click', () => {
 		"username": username.value,
 		"password": password.value
 	}
-	console.log(NewUser);
+	let tempUsers = GetSessionStorageUsers(); // return an arraylist
+	// tempusers = [{}, {}, {}];
+	// console.log(tempUsers);
+	// tempUsers.push({title: 'laptop'});
+	// console.log(tempUsers);
+
+	// console.log(NewUser);
 	if (username.value !== '' && password.value !== '') {
-		const ConvertObjToString = JSON.stringify(NewUser);
-		console.log(ConvertObjToString);
-		sessionStorage.setItem('user', ConvertObjToString);
+		// const ConvertObjToString = JSON.stringify(NewUser);
+		tempUsers.push(NewUser); // insert new user data
+		// console.log(ConvertObjToString);
+		// sessionStorage.setItem('user', ConvertObjToString);
+		console.log(tempUsers);
+		sessionStorage.setItem('user', JSON.stringify(tempUsers))
 	}
 });
 
@@ -34,3 +45,11 @@ EyeIcon.addEventListener('click', (e) => {
 	// closed eye: fa-solid fa-eye
 	// default: fa-solid fa-eye-slash
 })
+
+document.addEventListener('DOMContentLoaded', ()=>{
+	let users = GetSessionStorageUsers();
+	console.log(users); // null when sessionStorageData is empty
+	if (users === null){
+		sessionStorage.setItem('user', '[]');
+	}
+});
