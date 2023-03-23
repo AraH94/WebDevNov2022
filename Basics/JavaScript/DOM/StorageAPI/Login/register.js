@@ -12,13 +12,14 @@ RegisterBtn.addEventListener('click', () => {
 		"username": username.value,
 		"password": password.value
 	}
+	// console.log(NewUser);
+
 	let tempUsers = GetSessionStorageUsers(); // return an arraylist
 	// tempusers = [{}, {}, {}];
 	// console.log(tempUsers);
 	// tempUsers.push({title: 'laptop'});
 	// console.log(tempUsers);
 
-	// console.log(NewUser);
 	if (username.value !== '' && password.value !== '') {
 		// const ConvertObjToString = JSON.stringify(NewUser);
 		tempUsers.push(NewUser); // insert new user data
@@ -46,10 +47,10 @@ EyeIcon.addEventListener('click', (e) => {
 	// default: fa-solid fa-eye-slash
 })
 
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
 	let users = GetSessionStorageUsers();
 	console.log(users); // null when sessionStorageData is empty
-	if (users === null){
+	if (users === null) {
 		sessionStorage.setItem('user', '[]');
 	}
 });

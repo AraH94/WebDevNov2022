@@ -1,18 +1,24 @@
-const [fullname, profession, gender, nationality, address, city, phone, email] = document.querySelectorAll('input');
+const addEmployeeBtn = document.querySelector('.addEmployee');
+const searchEmployeeBtn = document.querySelector('.searchEmployee')
+const searchColumn = document.querySelector('#search-column')
+const [fullname, profession, nationality, address, city, phone, email] = document.querySelectorAll('input');
 
-// const gender = document.querySelectorAll('select');
+const result = document.querySelector('.result')
 
-const [save, search] = document.querySelectorAll('button');
+const GetLocalStorageEmployees = () => JSON.parse(localStorage.getItem('employee'));
 
 const employeeList = document.querySelector('.employee-list')
 
-// Save changes, add employee
-save.addEventListener('click', () => {
+addEmployeeBtn.addEventListener('click', (e) => {
+	console.log('Hello');
+
+	var e = document.getElementById("gender");
+	var value = e.value;
+
 	const newEmployee = {
-		"id": id.value,
 		"fullname": fullname.value,
 		"profession": profession.value,
-		"gender": gender.select,
+		"gender": value,
 		"nationality": nationality.value,
 		"address": address.value,
 		"city": city.value,
@@ -20,34 +26,101 @@ save.addEventListener('click', () => {
 		"email": email.value
 	}
 	console.log(newEmployee)
-	sessionStorage.setItem('currentEmployee', newEmployee);
 
-
-	let epmloyeeTable = document.getElementById('.table');
-	for (let i = 0; i < epmloyeeTable.length; i++) {
-		let employee = epmloyeeTable[i];
-		let rowHtml = '<tr><td>' + employee.fullname + '</td><td>' + employee.profession + '</td><td>' + employee.gender + '</td><td>' + employee.nationality + '</td><td>' + employee.address + '</td><td>' + employee.city + '</td><td>' + employee.phone + '</td><td>' + employee.email + '</td></tr>';
-		epmloyeeTable.innerHTML += rowHtml;
+	let tempEmployee = GetLocalStorageEmployees();
+	if (newEmployee) {
+		tempEmployee.push(newEmployee)
+		localStorage.setItem('employee', JSON.stringify(tempEmployee))
 	}
-	// employeeList.innerText = employee
+
+	result.innerHTML += `<tr>
+		<td>#</td>
+		<td>${newEmployee.fullname}</td>
+		<td>${newEmployee.profession}</td>
+		<td>${newEmployee.gender}</td>
+		<td>${newEmployee.nationality}</td>
+		<td>${newEmployee.address}</td>
+		<td>${newEmployee.city}</td>
+		<td>${newEmployee.phone}</td>
+		<td>${newEmployee.email}</td>
+		</tr>
+	`;
+
+	deletePrevious();
+
+	e.preventDefault;
 })
 
-search.addEventListener('click', async (e) => {
-	while (employeeList.firstChild) {
-		employeeList.removeChild(employeeList.firstChild)
-	}
-	console.log('Search Employee');
-	console.log(e.key);
-	console.log(e.target.value);
+// When employee added, delete form to add a new user
+function deletePrevious(){
+		document.getElementById('fullname').value = "";
+		document.getElementById('profession').value = "";
+		document.getElementById('gender').value = "";
+		document.getElementById('nationality').value = "";
+		document.getElementById('address').value = "";
+		document.getElementById('city').value = "";
+		document.getElementById('phone').value = "";
+		document.getElementById('email').value = "";
+}
 
-	let allEmployees = await employeeList(e.target.value);
+document.addEventListener('DOMContentLoaded', () => {
+	let employees = GetLocalStorageEmployees();
+	console.log(employees);
+	if (employees === null) {
+		localStorage.setItem('employee', '[]')
+	}else{
+		employees.forEach(resultEmp => {
+			result.innerHTML += `<tr>
+			<td>#</td>
+			<td>${resultEmp.fullname}</td>
+			<td>${resultEmp.profession}</td>
+			<td>${resultEmp.gender}</td>
+			<td>${resultEmp.nationality}</td>
+			<td>${resultEmp.address}</td>
+			<td>${resultEmp.city}</td>
+			<td>${resultEmp.phone}</td>
+			<td>${resultEmp.email}</td>
+			</tr>
+		`;
+		})
+	}
+})
+
+searchEmployeeBtn.addEventListener('click', (e) => {
+	while (result.firstChild) {
+		result.removeChild(result.firstChild)
+	}
+
+	var e = document.getElementById("select-column");
+	var selectedCol = e.value;
+	console.log(selectedCol);
+	
+	let allEmployees = GetLocalStorageEmployees();
 	console.log(allEmployees);
-	// displayProducts(allEmployees.employees);
-	console.log(e.target.value == "");
 
-	// When search is empty
-	if (e.target.value == "") {
-		let previousAllEmployees = await employeeList()
-		// displayProducts(previousAllEmployees)
-	}
+	let employeeResult = allEmployees.filter(employee => {
+		return employee[selectedCol.toLowerCase()] === searchColumn.value // select column is in UpperCase, so we have to convert it first to lowercase
+	});
+
+	// let employeeResult = allEmployees.filter(employee => {
+	// 	return employee.x.includes(searchColumn.value);
+	// });
+
+	employeeResult.forEach(resultEmp => {
+		result.innerHTML += `<tr>
+		<td>#</td>
+		<td>${resultEmp.fullname}</td>
+		<td>${resultEmp.profession}</td>
+		<td>${resultEmp.gender}</td>
+		<td>${resultEmp.nationality}</td>
+		<td>${resultEmp.address}</td>
+		<td>${resultEmp.city}</td>
+		<td>${resultEmp.phone}</td>
+		<td>${resultEmp.email}</td>
+		</tr>
+	`;
+	})
+	console.log(employeeResult, "result");
+
+	e.preventDefault;
 })
