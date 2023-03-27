@@ -1,4 +1,4 @@
-import { } from '../utilities/newsAction'
+import { newsAll, newsById, GetNewsDetail } from '../utilities/newsAction'
 // function Profile() {
 // 	return (
 // 		<ul>
@@ -32,6 +32,7 @@ export default function Profile(props) {
 					</li>
 				))
 			}
+
 			{
 				newsAll()
 			}
@@ -41,7 +42,6 @@ export default function Profile(props) {
 			{
 				GetNewsDetail()
 			}
-
 		</ul>
 	)
 }
