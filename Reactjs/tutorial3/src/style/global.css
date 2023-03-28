@@ -1,3 +1,14 @@
-body{
-	background: black;
+/* Bootstrap overwrites the styling, so you have to use !important */
+
+body {
+	background: rgb(12, 176, 209) !important;
+	color: white;
+}
+
+.form-text{
+	color: white !important;
+}
+
+.btn{
+	background:rgb(12, 176, 209) !important;
 }
