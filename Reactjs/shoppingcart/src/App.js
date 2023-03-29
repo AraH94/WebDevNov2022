@@ -1,4 +1,55 @@
+import { useState } from "react"
+
+// function Search({ productList }) {
+// 	const [searchInput, setSearchInput] = useState('');
+// 	const [filteredProducts, setFilteredProducts] = useState([...productList]);
+
+// filter products based on search input
+// 	const handleSearch = (e) => {
+// 		setSearchInput(e.target.value);
+// 		const keyword = e.target.value.toLowerCase();
+// 		const filtered = productList.filter((product) => product.name.toLowerCase().includes(keyword));
+// 		setFilteredProducts(filtered);
+// 	};
+// 	return (
+// 		<div>
+// 			<input type="text" value={searchInput} onChange={(e) => handleSearch(e)} />
+// 			<button>Search</button>
+// 			{filteredProducts.map((product) => (
+// 				<div key={product.id}>
+// 					<img src={product.thumbnail} alt={product.name} />
+// 					<h2>{product.name}</h2>
+// 					<p>{product.description}</p>
+// 				</div>
+// 			))
+// 			}
+// 		</div >
+
+// <div class="col">
+// 	<div className="col-md-6">
+// 		<div className="input-group">
+// 			<input type="text" className="form-control searchinput" placeholder="Search products" onChange={handleForms} name="search" />
+// 			<button className="btn btn-primary searchbtn" type="submit">Search</button>
+// 		</div>
+// 	</div>
+
+// 	<div class="card h-100 bg-secondary text-light">
+// 		<img src={products.thumbnail} class="product-image"
+// 			alt="Product Image" />
+// 		<div class="card-body">
+// 			<h5 class="card-title">{products.title} - {products.price}</h5>
+// 			<p class="card-text">{products.description}</p>
+// 			<a href="#" class="btn btn-primary buynow" data-id="${product.id}">Buy now</a>
+// 		</div>
+// 	</div>
+// </div>
+// 	)
+// }
+
 function App() {
+	const [state, setState] = useState([])
+	const [isClicked, setIsClicked] = useState(false);
+
 	const handleForms = (e) => {
 		const { name, value } = e.target;
 		let obj = {}
@@ -20,8 +71,15 @@ function App() {
 			.then(res => res.json())
 			.then(data => {
 				console.log(data);
+
+				setIsClicked(!isClicked)
+
+				setTimeout(() => {
+					setState(data)
+					setIsClicked(false)
+				}, 3000)
 			})
-	}
+	}	
 
 	return (
 		<div>
@@ -273,5 +331,4 @@ function App() {
 		</div>
 	)
 }
-
 export default App
