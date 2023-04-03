@@ -17,7 +17,6 @@ function App() {
 					<Post title="REACT-BOOTSTRAP" image="https://www.educative.io/v2api/editorpage/5816757605367808/image/6486746733740032">
 						<i>"React-Bootstrap takes the CSS framework of Bootstrap and replaces any existing JavaScript with strictly React components. This means you no longer need jQuery or other dependencies to alter JavaScript elements. Basically, the React-Bootstrap integration creates a more seamless front-end development experience by cutting out the middleman. Developers have more control over the appearance and function of the components in this model."</i>
 					</Post>
-
 				</Col>
 			</Row>
 

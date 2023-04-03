@@ -1,54 +1,15 @@
 import { useState } from "react"
 
-// function Search({ productList }) {
-// 	const [searchInput, setSearchInput] = useState('');
-// 	const [filteredProducts, setFilteredProducts] = useState([...productList]);
-
-// filter products based on search input
-// 	const handleSearch = (e) => {
-// 		setSearchInput(e.target.value);
-// 		const keyword = e.target.value.toLowerCase();
-// 		const filtered = productList.filter((product) => product.name.toLowerCase().includes(keyword));
-// 		setFilteredProducts(filtered);
-// 	};
-// 	return (
-// 		<div>
-// 			<input type="text" value={searchInput} onChange={(e) => handleSearch(e)} />
-// 			<button>Search</button>
-// 			{filteredProducts.map((product) => (
-// 				<div key={product.id}>
-// 					<img src={product.thumbnail} alt={product.name} />
-// 					<h2>{product.name}</h2>
-// 					<p>{product.description}</p>
-// 				</div>
-// 			))
-// 			}
-// 		</div >
-
-// <div class="col">
-// 	<div className="col-md-6">
-// 		<div className="input-group">
-// 			<input type="text" className="form-control searchinput" placeholder="Search products" onChange={handleForms} name="search" />
-// 			<button className="btn btn-primary searchbtn" type="submit">Search</button>
-// 		</div>
-// 	</div>
-
-// 	<div class="card h-100 bg-secondary text-light">
-// 		<img src={products.thumbnail} class="product-image"
-// 			alt="Product Image" />
-// 		<div class="card-body">
-// 			<h5 class="card-title">{products.title} - {products.price}</h5>
-// 			<p class="card-text">{products.description}</p>
-// 			<a href="#" class="btn btn-primary buynow" data-id="${product.id}">Buy now</a>
-// 		</div>
-// 	</div>
-// </div>
-// 	)
-// }
-
 function App() {
-	const [state, setState] = useState([])
+	const [state, setState] = useState([]);
 	const [isClicked, setIsClicked] = useState(false);
+
+
+	const handleInput = (e) => {
+		fetch(`https://dummyjson.com/products/search?q=${e.target.value}`)
+			.then(red => red.json())
+			.then(data => setState(data))
+	}
 
 	const handleForms = (e) => {
 		const { name, value } = e.target;
@@ -79,7 +40,7 @@ function App() {
 					setIsClicked(false)
 				}, 3000)
 			})
-	}	
+	}
 
 	return (
 		<div>
@@ -107,9 +68,9 @@ function App() {
 
 						</div>
 					</div>
-				</nav >
+				</nav>
 
-			</header >
+			</header>
 
 			<main className="my-3">
 				<div className="container-md">
@@ -117,7 +78,7 @@ function App() {
 					<div className="row my-2">
 						<div className="col-md-6">
 							<div className="input-group">
-								<input type="text" className="form-control searchinput" placeholder="Search products" onChange={handleForms} name="search" />
+								<input type="text" className="form-control searchinput" placeholder="Search products" onChange={handleInput} name="search" />
 								<button className="btn btn-primary searchbtn" type="submit" onClick={ClickHandler}>Search</button>
 							</div>
 						</div>
@@ -125,7 +86,7 @@ function App() {
 
 					<div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 products">
 
-						<div className="col">
+						{/* <div className="col">
 							<div className="card h-100 bg-secondary text-light">
 								<img src="https://i.dummyjson.com/data/products/6/1.png" className="product-image"
 									alt="Product Image" />
@@ -135,84 +96,31 @@ function App() {
 									<a href="#" className="btn btn-primary buynow">Buy Now</a>
 								</div>
 							</div>
-						</div>
-						<div className="col">
-							<div className="card h-100 bg-secondary text-light">
-								<img src="https://i.dummyjson.com/data/products/6/1.png" className="product-image"
-									alt="Product Image" />
-								<div className="card-body">
-									<h5 className="card-title">Product Title</h5>
-									<p className="card-text">Product Description</p>
-									<a href="#" className="btn btn-primary buynow">Buy Now</a>
+						</div> */}
+
+						{
+							console.log(state)
+						}
+						
+						{
+							state.products!==undefined?
+							state.products.map((item, index) => (
+								<div className="col" key={index}>
+									<div className="card h-100 bg-secondary text-light">
+										<img src={item.thumbnail} className="product-image"
+											alt="Product Image" />
+										<div className="card-body">
+											<h5 className="card-title">{item.title}</h5>
+											<p className="card-text">{item.description}</p>
+											<a href="#" className="btn btn-primary buynow">Buy Now</a>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div className="col">
-							<div className="card h-100 bg-secondary text-light">
-								<img src="https://i.dummyjson.com/data/products/6/1.png" className="product-image"
-									alt="Product Image" />
-								<div className="card-body">
-									<h5 className="card-title">Product Title</h5>
-									<p className="card-text">Product Description</p>
-									<a href="#" className="btn btn-primary buynow">Buy Now</a>
-								</div>
-							</div>
-						</div>
-						<div className="col">
-							<div className="card h-100 bg-secondary text-light">
-								<img src="https://i.dummyjson.com/data/products/6/1.png" className="product-image"
-									alt="Product Image" />
-								<div className="card-body">
-									<h5 className="card-title">Product Title</h5>
-									<p className="card-text">Product Description</p>
-									<a href="#" className="btn btn-primary buynow">Buy Now</a>
-								</div>
-							</div>
-						</div>
-						<div className="col">
-							<div className="card h-100 bg-secondary text-light">
-								<img src="https://i.dummyjson.com/data/products/6/1.png" className="product-image"
-									alt="Product Image" />
-								<div className="card-body">
-									<h5 className="card-title">Product Title</h5>
-									<p className="card-text">Product Description</p>
-									<a href="#" className="btn btn-primary buynow">Buy Now</a>
-								</div>
-							</div>
-						</div>
-						<div className="col">
-							<div className="card h-100 bg-secondary text-light">
-								<img src="https://i.dummyjson.com/data/products/6/1.png" className="product-image"
-									alt="Product Image" />
-								<div className="card-body">
-									<h5 className="card-title">Product Title</h5>
-									<p className="card-text">Product Description</p>
-									<a href="#" className="btn btn-primary buynow">Buy Now</a>
-								</div>
-							</div>
-						</div>
-						<div className="col">
-							<div className="card h-100 bg-secondary text-light">
-								<img src="https://i.dummyjson.com/data/products/6/1.png" className="product-image"
-									alt="Product Image" />
-								<div className="card-body">
-									<h5 className="card-title">Product Title</h5>
-									<p className="card-text">Product Description</p>
-									<a href="#" className="btn btn-primary buynow">Buy Now</a>
-								</div>
-							</div>
-						</div>
-						<div className="col">
-							<div className="card h-100 bg-secondary text-light">
-								<img src="https://i.dummyjson.com/data/products/6/1.png" className="product-image"
-									alt="Product Image" />
-								<div className="card-body">
-									<h5 className="card-title">Product Title</h5>
-									<p className="card-text">Product Description</p>
-									<a href="#" className="btn btn-primary buynow">Buy Now</a>
-								</div>
-							</div>
-						</div>
+							))
+							:
+							'No data'
+						}
+
 					</div>
 				</div>
 

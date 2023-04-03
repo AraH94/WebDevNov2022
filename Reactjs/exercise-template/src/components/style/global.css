@@ -1,0 +1,26 @@
+.nav-link {
+	border: 2px solid white;
+	margin-left: 150px;
+}
+
+.footer {
+	position: absolute !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	padding: 2rem !important;
+	text-align: center !important;
+	margin-top: 200px !important;
+}
+
+html {
+	height: 100% !important;
+}
+
+
+body {
+	position: relative !important;
+	margin: 0 !important;
+	padding-bottom: 6rem !important;
+	min-height: 100% !important;
+}
