@@ -42,7 +42,7 @@
 		// 			<a href="#" class="btn btn-primary buynow" data-id="${product.id}">Buy now</a>
 		// 		</div>
 		// 	</div>
-// 		// </div>
+		// </div>
 // 	)
 // }
 
