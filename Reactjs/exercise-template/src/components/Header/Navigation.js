@@ -8,9 +8,9 @@ export default function Navigation() {
 	return (
 		<Navbar bg="dark" expand="lg">
 			<Container>
-				<Navbar.Brand href={"/"} className="text-light">About Kero</Navbar.Brand>
+				<Navbar.Brand href={"/"} className="text-light about">About Kero</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
-					<Nav className="me-auto">
+					<Nav className="mx-auto">
 						<Link to={"/"} className="text-light nav-link">User interface</Link>
 						<Link to={"/web-design"} className="text-light nav-link">Web design</Link>
 						<Link to={"/programming"} className="text-light nav-link">Programming</Link>

@@ -13,18 +13,27 @@ import {
 	Route,
 	Routes
 } from 'react-router-dom'
+import Layout from './components/layout';
+import Project1 from './components/pages/project1';
+import Project2 from './components/pages/project2';
+import Project3 from './components/pages/project3';
+import Project4 from './components/pages/project4';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<Header />
-			<Routes>
-				<Route path="/" element={<App />} />
-				<Route path="/web-design" element={<WebDesign />} />
-				<Route path="/programming" element={<Programming />} />
-			</Routes>
+			<Layout>
+				<Routes>
+					<Route path="/" element={<App />} />
+					<Route path="/project1" element={<Project1 />} />
+					<Route path="/Project2" element={<Project2 />} />
+					<Route path="/Project3" element={<Project3 />} />
+					<Route path="/Project4" element={<Project4 />} />
+				</Routes>
+			</Layout>
 		</BrowserRouter>
 		<Footer />
 	</React.StrictMode>
-	);
+);
