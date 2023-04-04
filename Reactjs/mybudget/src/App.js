@@ -44,7 +44,7 @@ function App() {
 					</div>
 				</div>
 
-				<div className="container clearfix">
+				<div className="container clearfix d-flex">
 					<div className="income">
 						<h2 className="icome__title">Income</h2>
 

@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 export default function Main() {
 	return (
 		<Container>
-						<section id="menu-list" className="section-padding">
+			<section id="menu-list" className="section-padding">
 				<div className="row">
 					<div className="col-md-12 text-center  marb-35">
 						<div id="menu-wrapper">
