@@ -5,3 +5,7 @@ Step 4: import 'bootstrap/dist/css/bootstrap.min.css'; - index.js
 
 Add icons:
 npm install react-icons --save
+
+Publish file:
+- npm run build
+- netlify: go to sites - copy or drag build file

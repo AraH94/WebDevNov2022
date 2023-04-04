@@ -10,6 +10,9 @@
 	padding: 16px !important;
 	text-align: center !important;
 	margin-top: 50px !important;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
 }
 
 html {
@@ -23,6 +26,6 @@ body {
 	min-height: 100% !important;
 }
 
-.about{
+.about {
 	font-size: 30px;
 }

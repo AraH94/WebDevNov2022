@@ -1,7 +1,7 @@
-import Navigation from '../components/Header/Navigation'
+import NavigationHeader from "./Header/NavigationHeader";
 
 export default function Header(){
 	return(
-		<Navigation/>
+		<NavigationHeader/>
 	)
 }

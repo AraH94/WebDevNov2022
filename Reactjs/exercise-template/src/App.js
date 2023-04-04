@@ -1,34 +1,47 @@
-import { Container, Row, Col, ListGroup } from "react-bootstrap"
+import Header from './components/Header'
+import Footer from './components/Footer';
+import Main from './Main';
+
+import {
+	BrowserRouter,
+	Route,
+	Routes
+} from 'react-router-dom'
+
+import Layout from './components/layout';
+import Project1 from './components/pages/project1';
+import Project2 from './components/pages/project2';
+import Project3 from './components/pages/project3';
+import Project4 from './components/pages/project4';
+
+import Programming from './programming';
+import WebDesign from './web-design';
+
+import { useState } from 'react';
 
 function App() {
+	const [useLink, setUseLink] = useState({
+		project1: false,
+		project2: false,
+		project3: false,
+		project4: false
+	})
 	return (
 		<>
-			<Row>
-				<Col md={4} className="bg-light">
-					<h1 className="text-dark">Project Name</h1>
-					<a href="/">Go to the website</a>
-				</Col>
-				<Col md={8} className="bg-light">
-					<p className="text-dark pt-3">Mr. Lahmu's new big work constitutes a controlled adventurous technology that awakens the obvious dazzling...</p>
-				</Col>
-			</Row>
-			<img src="https://picsum.photos/867/400"></img>
-			<h2 className="text-dark mt-5">More screenshots of this project</h2>
+			<BrowserRouter>
+				<Header />
+				<Routes>
+					<Route path="/" element={<Main useLink={useLink} setUseLink={setUseLink} />} />
+					<Route path="/web-design" element={<WebDesign />} />
+					<Route path="/programming" element={<Programming />} />
 
-			<Row>
-				<Col md={3}>
-					<img src="https://picsum.photos/206/300" className="img-project"></img>
-				</Col>
-				<Col md={3}>
-					<img src="https://picsum.photos/206/300" className="img-project"></img>
-				</Col>
-				<Col md={3}>
-					<img src="https://picsum.photos/206/300" className="img-project"></img>
-				</Col>
-				<Col md={3}>
-					<img src="https://picsum.photos/206/300" className="img-project"></img>
-				</Col>
-			</Row>
+					<Route path="/project1" element={<Project1 useLink={useLink} setUseLink={setUseLink}/>} />
+					<Route path="/Project2" element={<Project2 useLink={useLink} setUseLink={setUseLink}/>} />
+					<Route path="/Project3" element={<Project3 useLink={useLink} setUseLink={setUseLink}/>} />
+					<Route path="/Project4" element={<Project4 useLink={useLink} setUseLink={setUseLink}/>} />
+				</Routes>
+				<Footer />
+			</BrowserRouter>
 
 		</>
 	)
