@@ -11,6 +11,21 @@ function App() {
 			.then(data => setState(data))
 	}
 
+	const handleForms = (e) => {
+		const { name, value } = e.target;
+		let obj = {}
+		if (name === "") {
+			obj = {
+				'searchoption': value
+			}
+		} else {
+			obj = {
+				[name]: value
+			}
+		}
+		console.log(obj);
+	}
+
 	// Show products when you click the search button
 	const ClickHandler = () => {
 		fetch('https://dummyjson.com/products/')
@@ -63,7 +78,10 @@ function App() {
 					<div className="row my-2">
 						<div className="col-md-6">
 							<div className="input-group">
-								<input type="text" className="form-control searchinput" placeholder="Search products" onChange={handleInput} name="search" />
+								<input type="text" className="form-control searchinput" placeholder="Search products" onChange={(e) => {
+									handleInput(e) 
+									handleForms(e)
+								}} name="search" />
 								<button className="btn btn-primary searchbtn" type="submit" onClick={ClickHandler}>Search</button>
 							</div>
 						</div>
@@ -86,24 +104,24 @@ function App() {
 						{
 							console.log(state)
 						}
-						
+
 						{
-							state.products!==undefined?
-							state.products.map((item, index) => (
-								<div className="col" key={index}>
-									<div className="card h-100 bg-secondary text-light">
-										<img src={item.thumbnail} className="product-image"
-											alt="Product Image" />
-										<div className="card-body">
-											<h5 className="card-title">{item.title}</h5>
-											<p className="card-text">{item.description}</p>
-											<a href="#" className="btn btn-primary buynow">Buy Now</a>
+							state.products !== undefined ?
+								state.products.map((item, index) => (
+									<div className="col" key={index}>
+										<div className="card h-100 bg-secondary text-light">
+											<img src={item.thumbnail} className="product-image"
+												alt="Product Image" />
+											<div className="card-body">
+												<h5 className="card-title">{item.title}</h5>
+												<p className="card-text">{item.description}</p>
+												<a href="#" className="btn btn-primary buynow">Buy Now</a>
+											</div>
 										</div>
 									</div>
-								</div>
-							))
-							:
-							'No data'
+								))
+								:
+								'No data'
 						}
 
 					</div>
