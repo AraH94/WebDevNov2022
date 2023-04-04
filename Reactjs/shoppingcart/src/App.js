@@ -11,21 +11,6 @@ function App() {
 			.then(data => setState(data))
 	}
 
-	const handleForms = (e) => {
-		const { name, value } = e.target;
-		let obj = {}
-		if (name === "") {
-			obj = {
-				'searchoption': value
-			}
-		} else {
-			obj = {
-				[name]: value
-			}
-		}
-		console.log(obj);
-	}
-
 	// Show products when you click the search button
 	const ClickHandler = () => {
 		fetch('https://dummyjson.com/products/')

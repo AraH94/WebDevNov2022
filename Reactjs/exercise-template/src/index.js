@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header'
-import WebDesign from './web-design';
-import Programming from './programming';
 import './components/style/global.css'
 import Footer from './components/Footer';
 
