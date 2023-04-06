@@ -9,3 +9,9 @@ npm install react-icons --save
 Publish file:
 - npm run build
 - netlify: go to sites - copy or drag build file
+
+Install sass: (compilar, you write it like css and it will convert it)
+- npm install sass
+- npm i compass-mixins
+import in style scss: @import "compass-mixins/lib/compass/css3";
+
